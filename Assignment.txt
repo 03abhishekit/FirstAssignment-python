@@ -1,0 +1,141 @@
+QUESTION 1.
+
+Some characteristics of Tuples:-
+1. Ordered:- Tuples maintain the order of elements as they are added.
+2. Immutable:-Once tuple are created , it cannot be changed or modified.
+3. Heterogeneous:-Tuples can contain elements of different data types.
+4. Hashable:- tuples are hashable.
+
+yes, tuples are immutable , means you cannot change the elements of a tuple once it created.
+
+
+QUESTION 2.
+
+ The two tuples method in python:-
+1. count(): This method return the number of times a specified valur=es appears in the tuple.
+2.  index(): This method return the index of the first occurence of the specified value.
+
+my_tuple = (1, 2, 3, 4, 2, 5, 2)
+
+count_of_2 = my_tuple.count(2)
+print("Count of 2 in the tuple:", count_of_2)  
+# Output: 3
+
+
+index_of_4 = my_tuple.index(4)
+print("Index of 4 in the tuple:", index_of_4)
+# Output : 3
+
+Tuples have only two built-in methods compared to lists primarily because tuples are immutable, while lists are mutable. 
+
+
+QUESTION 3.
+
+The collection data type that does not allow duplicate items is the set. Sets are unordered collections of unique elements.
+
+my_list = [1, 1, 1, 2, 1, 3, 1, 4, 2, 1, 2, 2, 2, 3, 2, 4, 3, 1, 3, 2, 3, 3, 3, 4, 4, 1, 4, 2, 4, 3, 4, 4]
+
+unique_elements = set(my_list)
+
+unique_list = list(unique_elements)
+
+print(unique_list)
+
+
+QUESTION 4.
+
+union() method:
+union() method returns a new set containing all the unique elements from the original set as well as another set(s) or iterable(s). It does not modify the original set.
+
+update() method:
+update() method adds elements from another set(s) or iterable(s) to the original set. It modifies the original set in place.
+
+Examples:-
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+
+# Example of union() method
+union_set = set1.union(set2)
+print("Union of set1 and set2:", union_set)  
+# Output: {1, 2, 3, 4, 5}
+print("Original set1:", set1)
+# Output: {1, 2, 3} (unchanged)
+
+# Example of update() method
+set1.update(set2)
+print("Updated set1:", set1)  
+# Output: {1, 2, 3, 4, 5}
+
+
+QUESTION 5.
+
+Dictionary:-
+A dictionary in Python is a collection of key-value pairs. It is an unordered, mutable data type that is used to store data in the form of key-value pairs. Each key is unique within a dictionary, and it is used to access its corresponding value.
+
+Example:-
+my_dict = {
+    "name": "John",
+    "age": 30,
+    "city": "New York"
+}
+
+print("Name:", my_dict["name"]) 
+# Output: John
+print("Age:", my_dict["age"]) 
+# Output: 30
+print("City:", my_dict["city"])  
+# Output: New York
+
+Dictionaries are unordered, meaning the order of elements is not guaranteed.
+If order is important, consider using the collections.OrderedDict class.
+
+
+QUESTION 6.
+
+Yes, we can create a nested dictionary in Python. A nested dictionary is a dictionary where the values can be dictionaries themselves, allowing for multiple levels of key-value pairs.
+
+Example:-
+nested_dict = {
+    "person1": {"name": "John", "age": 30, "city": "New York"},
+    "person2": {"name": "Emma", "age": 25, "city": "Los Angeles"},
+    "person3": {"name": "Mike", "age": 35, "city": "Chicago"}
+}
+
+
+print("Details of person1:", nested_dict["person1"])  
+# Output: {'name': 'John', 'age': 30, 'city': 'New York'}
+
+print("Name of person2:", nested_dict["person2"]["name"])  
+# Output: Emma
+
+print("Age of person3:", nested_dict["person3"]["age"])  
+# Output: 35
+
+
+QUESTION 7.
+
+dict1 = {'language': 'Python', 'course': 'Data Science Masters'}
+
+# Adding 'topics' key using setdefault()
+dict1.setdefault('topics', ['Python', 'Machine Learning', 'Deep Learning'])
+
+print(dict1)
+
+ If the 'topics' key already existed in the dictionary, its value would remain unchanged.
+
+
+QUESTION 8.
+
+There are three view objects:
+
+1. dict_keys:- This view object contains the keys of the dictionary.
+2. dict_values:- This view object contains the values of the dictionary.
+3. dict_items:- This view object contains the key-value pairs of the dictionary as tuples.
+
+dict1 = {'Sport': 'Cricket', 'Teams': ['India', 'Australia', 'England', 'South Africa', 'Sri Lanka', 'New Zealand']}
+
+print("Keys of the dictionary:", dict1.keys())
+
+print("Values of the dictionary:", dict1.values())
+
+print("Key-value pairs of the dictionary:", dict1.items())
